@@ -36,6 +36,9 @@ const SCurtain = styled(motion.div)`
   will-change: transform;
   background-color: #fff;
   z-index: 99;
+  @media (prefers-color-scheme: dark) {
+    background-color: #000;
+  }
 `;
 
 const SLeft = styled(SCurtain)`
