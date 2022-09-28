@@ -7,7 +7,7 @@ const SContainer = styled.div`
     position: relative;
     width: 100%;
     height: 100vh;
-    `;
+`;
 
 const SCurtains = styled.div`
   position: absolute;
@@ -15,6 +15,7 @@ const SCurtains = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+  pointer-events: none;
 `;
 
 const SCurtainsInner = styled(SCurtains)`
@@ -26,18 +27,19 @@ const SCurtainsInner = styled(SCurtains)`
     justify-content: center;
     align-items: center;
     color: white;
+    pointer-events: all;
 `
 
 const SCurtain = styled(motion.div)`
   position: absolute;
   top: 0;
   bottom: 0;
-  width: calc((100vw - 980px) / 2);
+  width: calc((100vw - var(--max-width)) / 2);
   will-change: transform;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   z-index: 99;
   @media (prefers-color-scheme: dark) {
-    background-color: #000;
+    background-color: hsl(0, 0%, 0%);
   }
 `;
 
@@ -59,15 +61,15 @@ const Curtains = () => {
 
     return (
         <SContainer>
-            <SCurtains ref={ref}>
-                <SLeft style={{ scaleX }} />
-                <SRight style={{ scaleX }} />
-            </SCurtains>
             <SCurtainsInner>
                 <h1>
                     This is a custom div
                 </h1>
             </SCurtainsInner>
+            <SCurtains ref={ref}>
+                <SLeft style={{ scaleX }} />
+                <SRight style={{ scaleX }} />
+            </SCurtains>
         </SContainer>
     );
 };

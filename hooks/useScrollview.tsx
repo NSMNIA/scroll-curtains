@@ -1,7 +1,7 @@
 import { useMotionValue, useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-const useScrollViewEffect = () => {
+const useScrollView = () => {
     const ref = useRef<any>(null);
     const { scrollY } = useScroll();
     const progress = useMotionValue(0);
@@ -17,4 +17,4 @@ const useScrollViewEffect = () => {
     return [ref, progress];
 };
 
-export default useScrollViewEffect;
+export default useScrollView;

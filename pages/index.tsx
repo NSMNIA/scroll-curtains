@@ -8,7 +8,7 @@ const SContainer = styled.div`
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: hsl(0, 0%, 0%);
+    background-color: inherit;
 `;
 
 const SDiv = styled.div`
@@ -21,6 +21,23 @@ const SDiv = styled.div`
     display: flex;
 `
 
+const SContent = styled.div`
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+`;
+
 const Home: NextPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -28,9 +45,14 @@ const Home: NextPage = () => {
     return (
         <>
             <SDiv>
-                <h1>
-                    Scroll down to see the curtains effect
-                </h1>
+                <SContent>
+                    <h1>
+                        Scroll down to see the curtains effect
+                    </h1>
+                    <p>
+                        This is a demo of a custom div that uses framer-motion to create a curtains effect when scrolling down.
+                    </p>
+                </SContent>
             </SDiv>
             <SContainer>
                 <Curtains />

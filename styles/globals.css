@@ -1,11 +1,21 @@
+:root {
+    --max-width: 1000px;
+    --primary-color: hsl(0, 50%, 50%);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: hsl(0, 0%, 100%);
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
 a {
@@ -23,7 +33,7 @@ a {
     }
 
     body {
-        background-color: black;
-        color: white;
+        background-color: hsl(0, 0%, 0%);
+        color: hsl(0, 0%, 100%);
     }
 }
