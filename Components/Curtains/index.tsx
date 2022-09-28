@@ -17,6 +17,17 @@ const SCurtains = styled.div`
   left: 0;
 `;
 
+const SCurtainsInner = styled(SCurtains)`
+    background-image: url(https://images.unsplash.com/photo-1663076121570-eb6e69bdde3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop8&q=100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+`
+
 const SCurtain = styled(motion.div)`
   position: absolute;
   top: 0;
@@ -24,6 +35,7 @@ const SCurtain = styled(motion.div)`
   width: calc((100vw - 980px) / 2);
   will-change: transform;
   background-color: #fff;
+  z-index: 99;
 `;
 
 const SLeft = styled(SCurtain)`
@@ -48,6 +60,11 @@ const Curtains = () => {
                 <SLeft style={{ scaleX }} />
                 <SRight style={{ scaleX }} />
             </SCurtains>
+            <SCurtainsInner>
+                <h1>
+                    This is a custom div
+                </h1>
+            </SCurtainsInner>
         </SContainer>
     );
 };

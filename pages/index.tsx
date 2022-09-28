@@ -1,14 +1,13 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import CustomerStoryCurtains from '../Components/Curtains';
+import Curtains from '../Components/Curtains';
 
 const SContainer = styled.div`
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    pointer-events: none;
     background-color: hsl(0, 0%, 0%);
 `;
 
@@ -34,7 +33,7 @@ const Home: NextPage = () => {
                 </h1>
             </SDiv>
             <SContainer>
-                <CustomerStoryCurtains />
+                <Curtains />
             </SContainer>
             <SDiv />
         </>
