@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import Curtains from '../Components/Curtains';
+import animation from '../utils/animation';
 
 const SContainer = styled.div`
     position: relative;
@@ -21,7 +23,7 @@ const SDiv = styled.div`
     display: flex;
 `
 
-const SContent = styled.div`
+const SContent = styled(motion.div)`
     max-width: var(--max-width);
     margin: 0 auto;
     text-align: center;
@@ -45,7 +47,10 @@ const Home: NextPage = () => {
     return (
         <>
             <SDiv>
-                <SContent>
+                <SContent variants={animation} initial="hidden" animate="show" transition={{
+                    duration: 0.5,
+                    ease: 'cubicBezier(0.075, 0.82, 0.165, 1)',
+                }}>
                     <h1>
                         Scroll down to see the curtains effect
                     </h1>
