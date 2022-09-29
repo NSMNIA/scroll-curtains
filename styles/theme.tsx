@@ -1,0 +1,23 @@
+export const colors = {
+    black: 'hsl(0, 0%, 0%)',
+    white: 'hsl(0, 0%, 100%)',
+    surface: 'hsl(0, 0%, 98%)',
+    interactive: 'hsl(212, 100%, 50%)',
+    interactiveHover: '#hsl(212, 100%, 40%)',
+    interactiveDisabled: 'hsl(212, 29%, 57%)',
+    danger: 'hsl(12, 100%, 56%)',
+    dangerHover: 'hsl(3, 69%, 47%)',
+    success: 'hsl(130, 65%, 57%)',
+    warning: 'hsl(42, 100%, 50%)',
+    greys: [
+        'hsl(0, 0%, 8%)',
+        'hsl(0, 0%, 15%)',
+        'hsl(203, 11%, 24%)',
+        'hsl(0, 0%, 30%)',
+        'hsl(0, 0%, 45%)',
+        'hsl(0, 0%, 70%)',
+        'hsl(0, 0%, 90%)',
+        'hsl(0, 0%, 97%)',
+        'hsl(0, 0%, 95%)',
+    ],
+};

@@ -28,10 +28,10 @@ const SCurtain = styled(motion.div)`
   bottom: 0;
   width: calc((100vw - var(--max-width)) / 2);
   will-change: transform;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   z-index: 99;
   @media (prefers-color-scheme: dark) {
-    background-color: hsl(0, 0%, 0%);
+    background-color: var(--black);
   }
 `;
 
