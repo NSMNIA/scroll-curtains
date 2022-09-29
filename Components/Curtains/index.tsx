@@ -19,14 +19,6 @@ const SCurtains = styled.div`
 `;
 
 const SCurtainsInner = styled(SCurtains)`
-    background-image: url(https://images.unsplash.com/photo-1663076121570-eb6e69bdde3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop8&q=100);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
     pointer-events: all;
 `
 
@@ -53,7 +45,11 @@ right: 0;
 transform-origin: 100% 0;
 `
 
-const Curtains = () => {
+export interface ICurtains {
+    children: React.ReactNode
+}
+
+const Curtains = ({ children }: ICurtains) => {
     const { width } = useWindowSize();
     const [ref, progress]: any = useScrollViewEffect();
     const end = 1 - 55 / width;
@@ -62,9 +58,7 @@ const Curtains = () => {
     return (
         <SContainer>
             <SCurtainsInner>
-                <h1>
-                    This is a custom div
-                </h1>
+                {children}
             </SCurtainsInner>
             <SCurtains ref={ref}>
                 <SLeft style={{ scaleX }} />

@@ -40,6 +40,18 @@ const SContent = styled(motion.div)`
     }
 `;
 
+const SBackground = styled.div`
+    background-image: url(https://images.unsplash.com/photo-1663076121570-eb6e69bdde3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop8&q=100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 const Home: NextPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -60,7 +72,21 @@ const Home: NextPage = () => {
                 </SContent>
             </SDiv>
             <SContainer>
-                <Curtains />
+                <Curtains>
+                    <SBackground>
+                        <SContent variants={animation} initial="hidden" animate="show" transition={{
+                            duration: 0.5,
+                            ease: 'cubicBezier(0.075, 0.82, 0.165, 1)',
+                        }}>
+                            <h1>
+                                This is the content
+                            </h1>
+                            <p>
+                                This is the content
+                            </p>
+                        </SContent>
+                    </SBackground>
+                </Curtains>
             </SContainer>
             <SDiv />
         </>
